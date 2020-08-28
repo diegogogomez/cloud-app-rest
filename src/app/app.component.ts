@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   constructor( private http: HttpClient ){
     console.log('Listado de paises');
-    this.http.get('https://restcountries.eu/rest/v2/capital/bogota')
+    this.http.get('https://cloud-app-rest-api.herokuapp.com/api/products/')
     .subscribe( capital => {
       console.log(capital);
     });
