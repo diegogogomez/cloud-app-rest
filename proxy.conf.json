@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://cloud-app-rest-api.herokuapp.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
