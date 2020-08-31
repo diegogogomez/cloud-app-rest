@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
+import { AppComponent, REST_URL } from './app.component';
 
 @NgModule({
   declarations: [
@@ -10,9 +10,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
-  providers: [],
+  providers: [
+      { provide: REST_URL, useValue: `https://cloud-app-rest-api.herokuapp.com/api/v2/obtain_products` }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

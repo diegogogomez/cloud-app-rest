@@ -1,1 +1,17 @@
-<h1>Hola mi ♥</h1>
+<div class="checkbox">
+    <label>
+    <input type="checkbox" (click)="imprimir()"/>
+        Show Table
+    </label>
+</div>
+<table class="table table-sm table-bordered table-striped" *ngIf="showTable">
+    <tr>
+        <th>ID Producto</th>
+        <th>Total vendidos</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let item of getProducts()">
+        <td>{{item.productId}}</td>
+        <td>{{item.quantity}}</td>
+    </tr>
+</table>
